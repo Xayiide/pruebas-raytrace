@@ -1,3 +1,6 @@
+#ifndef _VEC3_H_
+#define _VEC3_H_
+
 #include <math.h>
 #include <stdlib.h>
 #include <iostream>
@@ -44,3 +47,5 @@ public:
 
     float e[3];
 };
+
+#endif

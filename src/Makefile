@@ -2,17 +2,22 @@ CC     = g++
 CFLAGS = -Wall -Wextra -g3 -O0
 IFLAGS = -Iinc/
 
-.PHONY: clean re open
+.PHONY: all clean re open
 
-IMG = image.ppm
-SRC = main.cpp
-TGT = $(SRC:.cpp=)
+IMG  = image.ppm
+TGT  = main
+OBJS = main.o vec3.o
 
-$(TGT): $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
+all: $(TGT)
+
+$(TGT): $(OBJS)
+	$(CC) $(CFLAGS) $^ -o $@ $(IFLAGS)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $^ -o $@ $(IFLAGS)
 
 clean:
-	@rm -f $(TGT)
+	@rm -f $(TGT) $(IMG) $(OBJS)
 
 re: clean $(TGT)
 

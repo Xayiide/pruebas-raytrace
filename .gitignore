@@ -1,0 +1,6 @@
+# Ficheros intermedios
+*.swp
+
+# Ficheros objeto
+*.o
+
