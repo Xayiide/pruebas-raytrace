@@ -4,3 +4,7 @@
 # Ficheros objeto
 *.o
 
+# IDE files
+.cproject
+.project
+.settings

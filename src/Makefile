@@ -6,15 +6,12 @@ IFLAGS = -Iinc/
 
 IMG  = image.ppm
 TGT  = main
-OBJS = main.o vec3.o
+OBJS = main.o
 
 all: $(TGT)
 
-$(TGT): $(OBJS)
+$(TGT): main.cpp
 	$(CC) $(CFLAGS) $^ -o $@ $(IFLAGS)
-
-%.o: %.cpp
-	$(CC) $(CFLAGS) -c $^ -o $@ $(IFLAGS)
 
 clean:
 	@rm -f $(TGT) $(IMG) $(OBJS)
