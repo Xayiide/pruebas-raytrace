@@ -1,20 +1,25 @@
-CC     = g++
+CC     = gcc
 CFLAGS = -Wall -Wextra -g3 -O0
 IFLAGS = -Iinc/
+LFLAGS = -lm
 
 .PHONY: all clean re open
 
 IMG  = image.ppm
 TGT  = main
-OBJS = main.o
+SRCS = main.c vec3.c
+OBJS = $(SRCS:.c=.o)
 
 all: $(TGT)
 
-$(TGT): main.cpp
-	$(CC) $(CFLAGS) $^ -o $@ $(IFLAGS)
+main: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(IFLAGS) $(LFLAGS) -o $(TGT)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $^ -o $@ $(IFLAGS) $(LFLAGS)
 
 clean:
-	@rm -f $(TGT) $(IMG) $(OBJS)
+	@rm -f $(OBJS) $(TGT) $(IMG)
 
 re: clean $(TGT)
 
