@@ -7,7 +7,7 @@ LFLAGS = -lm
 
 IMG  = image.ppm
 TGT  = main
-SRCS = main.c vec3.c
+SRCS = main.c vec3.c ray.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(TGT)

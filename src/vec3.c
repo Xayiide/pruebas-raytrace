@@ -71,18 +71,18 @@ Vec3 vec3_div(Vec3 v1, Vec3 v2) {
 
 /* división de vector por escalar */
 Vec3 vec3_div_esc(Vec3 v, float e) {
-    Vec3 new = {.x = v.x * e,
-                .y = v.y * e,
-                .z = v.z * e};
+    Vec3 new = {.x = v.x / e,
+                .y = v.y / e,
+                .z = v.z / e};
 
     return new;
 }
 
 /* multiplicación de vector por escalar */
 Vec3 vec3_mul_esc(Vec3 v, float e) {
-    Vec3 new = {.x = v.x / e,
-                .y = v.y / e,
-                .z = v.z / e};
+    Vec3 new = {.x = v.x * e,
+                .y = v.y * e,
+                .z = v.z * e};
 
     return new;
 }
