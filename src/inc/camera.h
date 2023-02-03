@@ -13,7 +13,7 @@ typedef struct {
 
 Camera cam_create(Vec3, Vec3, Vec3, Vec3);
 
-Ray get_ray(Camera, float, float);
+Ray cam_get_ray(Camera, float, float);
 
 #endif
 

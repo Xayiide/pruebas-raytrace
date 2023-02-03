@@ -1,3 +1,4 @@
+SHELL := /bin/bash # time
 CC     = gcc
 CFLAGS = -Wall -Wextra -Wpedantic -g3 -O0
 IFLAGS = -Iinc/
@@ -24,5 +25,5 @@ clean:
 re: clean $(TGT)
 
 open: $(TGT)
-	./$(TGT) > $(IMG)
+	time ./$(TGT) > $(IMG)
 	xdg-open $(IMG)
