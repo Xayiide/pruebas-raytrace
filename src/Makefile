@@ -1,5 +1,5 @@
 CC     = gcc
-CFLAGS = -Wall -Wextra -g3 -O0
+CFLAGS = -Wall -Wextra -Wpedantic -g3 -O0
 IFLAGS = -Iinc/
 LFLAGS = -lm
 
@@ -7,7 +7,7 @@ LFLAGS = -lm
 
 IMG  = image.ppm
 TGT  = main
-SRCS = main.c vec3.c ray.c sphere.c
+SRCS = main.c vec3.c ray.c sphere.c hitable.c camera.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(TGT)
