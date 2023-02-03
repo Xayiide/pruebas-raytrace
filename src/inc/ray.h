@@ -1,18 +1,16 @@
 #ifndef _RAY_H_
 #define _RAY_H_
+
 #include "vec3.h"
 
-class ray {
-public:
-    ray() {}
-    ray(const vec3& a, const vec3& b) { A = a; B = b; }
-    vec3 origin()    const { return A; }
-    vec3 direction() const { return B; }
-    vec3 point_at_parameter(float t) const { return A + t*B; }
+typedef struct {
+    Vec3 origin;
+    Vec3 direction;
+} Ray;
 
-    vec3 A;
-    vec3 B;
-};
+Ray ray_create(Vec3, Vec3);
+
+Vec3 ray_point_at_param(Ray, double);
 
 
 #endif
