@@ -7,12 +7,12 @@
 
 typedef struct {
     Vec3  center;
-    float radius;
+    double radius;
 } Sphere;
 
-Sphere *sphere_create(Vec3, float);
+Sphere *sphere_create(Vec3, double);
 
-bool ray_hit_sphere_cb(Ray, float, float, hitrec *, Sphere *);
+bool ray_hit_sphere_cb(Ray, double, double, hitrec *, Sphere *);
 
 #endif
 

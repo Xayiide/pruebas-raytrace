@@ -10,7 +10,7 @@ typedef struct {
 
 Ray ray_create(Vec3, Vec3);
 
-Vec3 ray_point_at_param(Ray, float);
+Vec3 ray_point_at_param(Ray, double);
 
 
 #endif

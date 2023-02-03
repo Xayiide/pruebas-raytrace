@@ -1,7 +1,7 @@
 #include <math.h> /* sqrt */
 #include "vec3.h"
 
-Vec3 vec3_create(float x, float y, float z) {
+Vec3 vec3_create(double x, double y, double z) {
     Vec3 v = {.x = x,
               .y = y,
               .z = z};
@@ -10,14 +10,14 @@ Vec3 vec3_create(float x, float y, float z) {
 }
 
 /* sqrt(x^2 + y^2 + z^2) */
-float vec3_length(Vec3 vec) {
-    float r = sqrtf((vec.x * vec.x) + (vec.y * vec.y) + (vec.z * vec.z));
+double vec3_length(Vec3 vec) {
+    double r = sqrt((vec.x * vec.x) + (vec.y * vec.y) + (vec.z * vec.z));
     
     return r;
 }
 
-float vec3_squared_length(Vec3 vec) {
-    float r = ((vec.x * vec.x) + (vec.y * vec.y) + (vec.z * vec.z));
+double vec3_squared_length(Vec3 vec) {
+    double r = ((vec.x * vec.x) + (vec.y * vec.y) + (vec.z * vec.z));
 
     return r;
 }
@@ -70,7 +70,7 @@ Vec3 vec3_div(Vec3 v1, Vec3 v2) {
 
 
 /* división de vector por escalar */
-Vec3 vec3_div_esc(Vec3 v, float e) {
+Vec3 vec3_div_esc(Vec3 v, double e) {
     Vec3 new = {.x = v.x / e,
                 .y = v.y / e,
                 .z = v.z / e};
@@ -79,7 +79,7 @@ Vec3 vec3_div_esc(Vec3 v, float e) {
 }
 
 /* multiplicación de vector por escalar */
-Vec3 vec3_mul_esc(Vec3 v, float e) {
+Vec3 vec3_mul_esc(Vec3 v, double e) {
     Vec3 new = {.x = v.x * e,
                 .y = v.y * e,
                 .z = v.z * e};
@@ -89,8 +89,8 @@ Vec3 vec3_mul_esc(Vec3 v, float e) {
 
 
 /* producto escalar de dos vectores */
-float vec3_dot(Vec3 v1, Vec3 v2) {
-    float r = ((v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z));
+double vec3_dot(Vec3 v1, Vec3 v2) {
+    double r = ((v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z));
 
     return r;
 }

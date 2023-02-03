@@ -17,7 +17,7 @@ void hitable_create(hit_cb callback, void *self) {
 }
 
 
-bool hitable_call_all(Ray r, float t_min, float t_max, hitrec *rec) {
+bool hitable_call_all(Ray r, double t_min, double t_max, hitrec *rec) {
     hitrec temp;
     bool hit_anything = false;
     uint8_t i;

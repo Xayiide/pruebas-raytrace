@@ -11,7 +11,7 @@ Camera cam_create(Vec3 ll, Vec3 h, Vec3 v, Vec3 o) {
     return cam;
 }
 
-Ray cam_get_ray(Camera cam, float u, float v) {
+Ray cam_get_ray(Camera cam, double u, double v) {
     Ray r;
     r.origin = cam.origin;
     r.direction = vec3_add(cam.ll_corner,

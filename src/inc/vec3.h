@@ -2,17 +2,17 @@
 #define _VEC3_H_
 
 typedef struct {
-    float x;
-    float y;
-    float z;
+    double x;
+    double y;
+    double z;
 } Vec3;
 
 
-Vec3 vec3_create(float, float, float);
+Vec3 vec3_create(double, double, double);
 
-float vec3_length(Vec3);
+double vec3_length(Vec3);
 
-float vec3_squared_length(Vec3);
+double vec3_squared_length(Vec3);
 
 Vec3 vec3_unit_vector(Vec3);
 
@@ -28,14 +28,14 @@ Vec3 vec3_mul(Vec3, Vec3);
 Vec3 vec3_div(Vec3, Vec3);
 
 /* división escalar */
-Vec3 vec3_div_esc(Vec3, float);
+Vec3 vec3_div_esc(Vec3, double);
 
 /* multiplicación escalar */
-Vec3 vec3_mul_esc(Vec3, float);
+Vec3 vec3_mul_esc(Vec3, double);
 
 
 /* producto escalar */
-float vec3_dot(Vec3, Vec3);
+double vec3_dot(Vec3, Vec3);
 
 /* producto vectorial */
 Vec3 vec3_cross(Vec3, Vec3);
